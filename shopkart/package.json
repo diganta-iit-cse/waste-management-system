@@ -1,0 +1,11 @@
+{
+  "name": "shopkart",
+  "version": "1.0.0",
+  "description": "ShopKart Full-Stack MERN E-Commerce Platform",
+  "scripts": {
+    "server": "npm run dev --prefix server",
+    "client": "npm run dev --prefix client",
+    "seed": "npm run seed --prefix server",
+    "test:e2e": "node server/test_e2e.js"
+  }
+}

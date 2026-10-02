@@ -1,0 +1,27 @@
+{
+  "name": "wastewise-platform",
+  "version": "1.0.0",
+  "description": "WasteWise - AI Waste Management, Accessible Voice Assistant & Doorstep Kabadiwala Pickup Platform (MERN)",
+  "scripts": {
+    "server": "npm run dev --prefix server",
+    "client": "npm run dev --prefix client",
+    "seed": "npm run seed --prefix server",
+    "build": "npm run build --prefix client",
+    "test:e2e": "node server/run_test_with_server.js",
+    "dev": "node start-dev.js"
+  },
+  "keywords": [
+    "mern",
+    "waste-management",
+    "wastewise",
+    "voice-accessibility",
+    "speech-to-text",
+    "text-to-speech",
+    "kabadiwala",
+    "ai-classification",
+    "circular-economy",
+    "sih2026"
+  ],
+  "author": "WasteWise Team",
+  "license": "ISC"
+}

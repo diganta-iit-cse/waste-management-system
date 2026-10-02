@@ -1,0 +1,110 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-gray-950 text-gray-100 font-sans antialiased selection:bg-emerald-500 selection:text-white;
+    overflow-x: hidden;
+  }
+}
+
+/* Custom scrollbars */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #030712;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #065f46;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #059669;
+}
+
+/* Audio Waveform Animation */
+@keyframes waveform {
+  0%, 100% {
+    height: 6px;
+  }
+  50% {
+    height: 28px;
+  }
+}
+
+.animate-waveform {
+  animation: waveform 0.8s ease-in-out infinite;
+}
+
+/* Spinning slow for active icons */
+@keyframes spin-slow {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.animate-spin-slow {
+  animation: spin-slow 8s linear infinite;
+}
+
+/* ========================================================= */
+/* ACCESSIBILITY MODE (Requirement #51)                     */
+/* ========================================================= */
+html.accessibility-mode {
+  font-size: 112%; /* Scaled up readable typography */
+}
+
+html.accessibility-mode body {
+  background-color: #000000 !important;
+  color: #ffffff !important;
+  line-height: 1.8 !important;
+}
+
+html.accessibility-mode button,
+html.accessibility-mode a {
+  min-height: 48px; /* Larger tap target */
+  font-weight: 700 !important;
+}
+
+html.accessibility-mode input,
+html.accessibility-mode select,
+html.accessibility-mode textarea {
+  min-height: 48px !important;
+  border-width: 2px !important;
+  border-color: #10b981 !important;
+  background-color: #000000 !important;
+  color: #ffffff !important;
+  font-size: 1.05rem !important;
+}
+
+/* Prominent focus indicator for keyboard / screen reader navigation */
+html.accessibility-mode *:focus {
+  outline: 3px solid #34d399 !important;
+  outline-offset: 3px !important;
+}
+
+/* High contrast borders on cards */
+html.accessibility-mode .bg-gray-900,
+html.accessibility-mode .bg-gray-950 {
+  background-color: #050505 !important;
+  border-width: 2px !important;
+  border-color: #059669 !important;
+}
+
+/* High visibility for voice microphone and speaker icons */
+html.accessibility-mode button[title*="Listening"],
+html.accessibility-mode button[title*="Listen"],
+html.accessibility-mode button[title*="Speak"] {
+  border-width: 3px !important;
+  border-color: #34d399 !important;
+  box-shadow: 0 0 15px rgba(52, 211, 153, 0.4) !important;
+}
